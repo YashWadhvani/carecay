@@ -1,0 +1,138 @@
+@import "../assets/styles/variables.scss";
+
+.hs-box {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  // height: 25rem;
+  border-radius: 14px;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    // height: 50rem;
+    background-color: $accent;
+    transition: all 0.2s ease-in;
+    color: $white;
+
+    .caption p {
+      color: $white;
+    }
+
+    .caption .hs-box-icon {
+      background-color: $white;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .hs-box-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      h4 {
+        font-size: 3.4rem;
+        text-transform: capitalize;
+      }
+    }
+
+    .caption {
+      display: flex;
+      align-items: center;
+      .hs-box-icon {
+        display: inline-block;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: $blueaccent;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+      p {
+        font-size: 2rem;
+        color: $dark;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .hs-box-image-wrapper {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    .hs-box-image {
+      border-radius: 14px;
+      height: 25rem;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hs-box {
+    &-content {
+      .caption {
+        p {
+          font-size: 3rem;
+        }
+      }
+
+      .hs-box-title {
+        h4 {
+          font-size: 4.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hs-box:first-of-type {
+    height: 100rem;
+  }
+  .hs-box {
+    padding: 5rem;
+    height: 95rem;
+    border-radius: 0;
+    .row {
+      flex-direction: column;
+      .col-50 {
+        width: 100%;
+      }
+      .col-50:first-of-type {
+        padding-bottom: 2.5rem;
+      }
+    }
+
+    &-content {
+      .caption {
+        p {
+          font-size: 6rem;
+        }
+      }
+
+      .hs-box-title {
+        bottom: -12rem;
+        left: 1.5rem;
+        h4 {
+          font-size: 7.5rem;
+        }
+      }
+    }
+
+    .hs-box-image-wrapper {
+      .hs-box-image {
+        border-radius: 5px;
+        height: 70rem;
+      }
+    }
+  }
+}

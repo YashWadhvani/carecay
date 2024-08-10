@@ -1,0 +1,143 @@
+@import "../assets/styles/variables.scss";
+
+.dc {
+  background-color: $white;
+  &-slider {
+    .swiper-navigation {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      height: 15rem;
+
+      .custom-button {
+        background-color: $blueaccent;
+        color: #fff;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 57.5rem 0rem !important;
+      }
+
+      .custom-button::after {
+        font-size: 16px;
+      }
+    }
+
+    // Hide default Swiper navigation buttons
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+  &-card {
+    &-image-wrapper {
+      width: 100%;
+      height: 50rem;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 14px;
+      }
+
+      .dc-span {
+        position: absolute;
+        background-color: $blueaccent;
+        bottom: 18px;
+        right: 18px;
+        padding: 10px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          font-size: 3.3rem;
+          color: #fff;
+        }
+      }
+    }
+
+    .dc-card-content {
+      padding: 15px 0;
+      h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: $dark;
+        padding-bottom: 3px;
+      }
+
+      h4 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: $dark;
+        padding-bottom: 3px;
+      }
+
+      p {
+        font-size: 2rem;
+        color: $lighttext;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .dc {
+    &-card {
+      .dc-card-image-wrapper {
+        .dc-span {
+          span {
+            font-size: 4rem;
+          }
+        }
+      }
+      .dc-card-content {
+        h2 {
+          font-size: 4rem;
+        }
+        h4 {
+          font-size: 3.5rem;
+        }
+        p {
+          font-size: 2.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dc {
+    &-slider {
+      padding: 0 5rem;
+    }
+
+    &-card {
+      .dc-card-image-wrapper {
+        height: 100rem;
+        .dc-span {
+          span {
+            font-size: 6rem;
+          }
+        }
+      }
+
+      .dc-card-content {
+        h2 {
+          font-size: 8rem;
+        }
+        h4 {
+          font-size: 7rem;
+        }
+        p {
+          font-size: 5.5rem;
+        }
+      }
+    }
+  }
+}

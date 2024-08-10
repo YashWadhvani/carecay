@@ -1,0 +1,159 @@
+@import "../assets/styles/variables.scss";
+
+#home-hero {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hh-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  // background-color: aliceblue;
+}
+
+.hh-button {
+  padding-top: 20px;
+}
+
+.hh-content {
+  width: 50%;
+  padding-left: 15rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 6.66rem;
+    color: $dark;
+    font-weight: 600;
+    line-height: 1.1;
+    span {
+      color: $accent;
+      // font-weight: 900;
+    }
+  }
+
+  p {
+    padding: 10px 0;
+    font-size: 2.4rem;
+    color: $lighttext;
+  }
+}
+
+.mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure it does not block interactions */
+}
+
+// #home-hero #mymask {
+//     position: absolute;
+//     top: 10%; /* Adjust the top positioning as needed */
+//     left: 50%; /* Center horizontally or adjust as needed */
+//     width: 50%; /* Adjust the width as needed */
+//     height: auto; /* Adjust height based on width if necessary */
+//     transform: translate(-50%, 0); /* Center horizontally if needed */
+// }
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.hh-svg {
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+  .svg-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#home-hero svg {
+  // width: 100%;
+  position: absolute;
+  fill: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: 100vh;
+
+  // path {
+  //     fill: rgba(255,255,255,0);
+  //     stroke: #000;
+  //     stroke-width: 1px;
+  // }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #home-hero {
+    svg {
+      display: none;
+    }
+    video {
+      mask: none !important;
+      // filter: opacity(75%);
+      opacity: 0.9;
+      filter: brightness(25%);
+    }
+
+    .hh-content {
+      justify-content: flex-end;
+      padding-bottom: 10rem;
+      padding-left: 10rem;
+      h2 {
+        font-size: 10rem;
+        color: aliceblue;
+      }
+      p {
+        font-size: 5rem;
+        color: aliceblue;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #home-hero {
+    svg {
+      display: none;
+    }
+    video {
+      mask: none !important;
+      // filter: opacity(75%);
+      opacity: 0.9;
+      filter: brightness(25%);
+    }
+
+    .hh-content {
+      justify-content: flex-end;
+      padding-bottom: 30rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      width: 100%;
+      h2 {
+        font-size: 14rem;
+        color: aliceblue;
+      }
+      p {
+        font-size: 7rem;
+        color: aliceblue;
+      }
+    }
+  }
+}

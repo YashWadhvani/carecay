@@ -1,0 +1,46 @@
+.ha-content {
+  width: 100%;
+  position: relative;
+  padding: 23rem 0 6rem 0;
+
+  &-inner {
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .ha-content {
+    &-inner {
+      h2 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ha-content {
+    padding: 30rem 0;
+    padding-bottom: 5rem;
+    .row {
+      .col-50 {
+        width: 100%;
+      }
+      .col-50:first-of-type {
+        display: none;
+      }
+    }
+    &-inner {
+      padding: 0 5rem;
+      h2 {
+        font-size: 8rem;
+        font-weight: 400;
+        padding-bottom: 5rem;
+      }
+    }
+  }
+}

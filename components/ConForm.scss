@@ -1,0 +1,120 @@
+@import "../assets/styles/variables.scss";
+
+.con-form {
+  width: 100%;
+  position: relative;
+
+  &-wrapper {
+    .con-form-image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding-right: 7.5px;
+      border-radius: 14px;
+      .con-form-image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 14px;
+      }
+      img {
+        width: 110%;
+        height: 110%;
+        object-fit: cover;
+      }
+    }
+
+    .con-form-main {
+      padding-left: 7.5px;
+      padding: 20px;
+      background-color: $light;
+
+      .con-form-main-wrapper {
+        border-radius: 14px;
+      }
+      form {
+        h4 {
+          font-size: 3rem;
+          color: $blueaccent;
+          margin-bottom: 6rem;
+          text-decoration: underline;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 10px 20px;
+          font-size: 2rem;
+          color: $dark;
+          margin-bottom: 10px;
+          border: none;
+          border-radius: 7px;
+          outline: none;
+          background-color: #dbdbdb;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .con-form {
+    &-wrapper {
+      .row {
+        .col-50:first-of-type {
+          display: none;
+        }
+        .col-50 {
+          width: 100%;
+        }
+      }
+
+      .con-form-main {
+        &-wrapper {
+          form {
+            h4 {
+              font-size: 6rem;
+            }
+            input {
+              font-size: 4rem;
+            }
+            textarea {
+              font-size: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .con-form {
+    &-wrapper {
+      .row {
+        .col-50:first-of-type {
+          display: none;
+        }
+        .col-50 {
+          width: 100%;
+        }
+      }
+
+      .con-form-main {
+        &-wrapper {
+          form {
+            h4 {
+              font-size: 10rem;
+            }
+            input {
+              font-size: 8rem;
+            }
+            textarea {
+              font-size: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+@import "../assets/styles/variables.scss";
+
+.ab-ab {
+  background-color: $white;
+  border-radius: 14px 14px 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &-wrapper {
+    border-radius: 14px 14px 0 0;
+    padding: 6rem 0;
+  }
+  &-title {
+    h2 {
+      font-size: 5rem;
+      color: $dark;
+    }
+  }
+
+  &-content {
+    p {
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  .ab-ab-stats {
+    padding-top: 6rem;
+  }
+
+  .ab-stats-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ab-stat {
+    width: 25%;
+    height: 30rem;
+    background-color: $light;
+    margin-left: 15px;
+    border-radius: 14px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      font-size: 6rem;
+      color: $blueaccent;
+      font-weight: 400;
+    }
+    p {
+      font-size: 3rem;
+      color: $blueaccent;
+    }
+  }
+
+  .colored {
+    width: 50%;
+    margin-left: 0px;
+    background-color: $accent;
+
+    h2 {
+      color: $white;
+    }
+    p {
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .ab-ab {
+    &-title {
+      h2 {
+        font-size: 8rem;
+      }
+    }
+
+    &-content {
+      p {
+        font-size: 4rem;
+      }
+    }
+
+    .ab-stat {
+      h2 {
+        font-size: 8rem;
+      }
+
+      p {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ab-ab {
+    .ab-ab-wrapper {
+      padding: 5rem;
+      .row {
+        .col-50:nth-of-type(odd) {
+          width: 30%;
+        }
+        .col-50:nth-of-type(even) {
+          width: 70%;
+        }
+      }
+
+      .ab-ab-stats {
+        .ab-stats-wrapper {
+          flex-direction: column;
+        }
+      }
+    }
+    &-title {
+      h2 {
+        font-size: 10rem;
+      }
+    }
+
+    &-content {
+      p {
+        font-size: 5.5rem;
+        line-height: 1.2;
+      }
+    }
+
+    .ab-stat {
+      width: 100%;
+      margin-top: 5rem;
+      margin-left: 0;
+      flex-direction: row;
+      padding: 5rem;
+      h2 {
+        font-size: 15rem;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        font-size: 9rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
