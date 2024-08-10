@@ -9,8 +9,10 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register ScrollTrigger with GSAP
-gsap.registerPlugin(ScrollTrigger);
+if (process.client) {
+  // Register ScrollTrigger with GSAP
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export default {
   mounted() {
