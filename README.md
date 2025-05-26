@@ -1,75 +1,42 @@
-# Nuxt 3 Minimal Starter
+# Carecay
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Carecay is a modern web platform designed for car resellers to elegantly showcase their inventory, company story, gallery, and contact information. Built as part of an internship project, Carecay combines a sleek user experience with robust technology to help car businesses connect with potential buyers.
 
-## Setup
+## Tech Stack
 
-Make sure to install the dependencies:
+- Vue.js
+- Nuxt.js
+- HTML
+- CSS
+- GSAP
 
-```bash
-# npm
-npm install
+## Table of Contents
 
-# pnpm
-pnpm install
+- [Getting Started](#getting-started)
+- [License](#license)
+- [Contact](#contact)
 
-# yarn
-yarn install
+## Getting Started
 
-# bun
-bun install
-```
+1. Clone the repository:
+    ```
+    git clone https://github.com/YashWadhvani/carecay.git
+    cd carecay
+    ```
+2. Install dependencies:
+    ```
+    npm install
+    ```
+3. Start the development server:
+    ```
+    npm run dev
+    ```
 
-## Development Server
+## License
 
-Start the development server on `http://localhost:3000`:
+This project is licensed under the MIT License.
 
-```bash
-# npm
-npm run dev
+## Contact
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Email: yashwadhvani123@gmail.com
+- GitHub: [YashWadhvani](https://github.com/YashWadhvani)
